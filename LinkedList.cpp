@@ -69,7 +69,7 @@ bool LinkedList::operator==(const LinkedList &other) const {
 }
 
 bool LinkedList::operator!=(const LinkedList &other) const {
-    return !(*this  == other);
+    return !(*this == other);
 }
 
 // Implement Copy Assignment
@@ -87,6 +87,7 @@ LinkedList& LinkedList::operator=(const LinkedList &other) {
         this->append(n1->info);
         n1 = n1->next;
     }
+    return *this;
 }
 
 // Implement Linked List
