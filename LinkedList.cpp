@@ -23,6 +23,9 @@ LinkedList::~LinkedList() {
 // Implement Copy Constructor
 LinkedList::LinkedList(const LinkedList &other) {
     //itterate through list and copy values
+    cout << "Copy Constructor Called!" << endl;
+    this->head = nullptr;
+    this->tail = nullptr;
     node* temp = other.head;
     while(temp != nullptr) {
         this->append(temp->info);

@@ -57,6 +57,17 @@ class LinkedListTest {
             // Case 3: List same length different values
             assertTrue((l1 != l2), "l1 = [2], l2 = [1]");
         }
+        void test_copy_constructor() {
+            LinkedList l1;
+            l1.append(1);
+            l1.append(2);
+            l1.append(3);
+            cout << "------List 1------" << endl;
+            l1.print();
+            LinkedList l2(l1);
+            cout << "------List 2------" << endl;
+            l2.print();
+        }
 
 };
 
@@ -64,5 +75,6 @@ int main() {
     LinkedListTest test;
     test.test_operator_eqeq();
     test.test_operator_noteq();
+    test.test_copy_constructor();
     return 0;
 }
