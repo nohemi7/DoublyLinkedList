@@ -7,9 +7,9 @@ using namespace std;
 LinkedList::LinkedList() : head(nullptr), tail(nullptr) {}
 
 // Implement Destructor
-LinkedList~LinkedList() {
+LinkedList::~LinkedList() {
     // keep a temporary pointer
-    node *temp = head
+    node *temp = head;
     // Iterate through the Linked List
     while(temp != nullptr)
     {
@@ -21,7 +21,7 @@ LinkedList~LinkedList() {
 }
 
 // Implement Copy Constructor
-Linked::Linked(const LinkedList &other) {
+LinkedList::LinkedList(const LinkedList &other) {
     //itterate through list and copy values
     node* temp = other.head;
     while(temp != nullptr) {
@@ -31,7 +31,7 @@ Linked::Linked(const LinkedList &other) {
 }
 
 // Implement Append
-void LinkedList::apend(int x) {
+void LinkedList::append(int x) {
     // make a new node on the heap and allocate vals
     node *n = new node;
     n->info = x;
@@ -69,7 +69,7 @@ bool LinkedList::operator==(const LinkedList &other) const {
 }
 
 bool LinkedList::operator!=(const LinkedList &other) const {
-    return !(*this  == other)
+    return !(*this  == other);
 }
 
 // Implement Copy Assignment
@@ -77,7 +77,7 @@ LinkedList& LinkedList::operator=(const LinkedList &other) {
     // delete nodes on current list
     node *temp = head;
     while(temp != nullptr) {
-        temp = temp->next
+        temp = temp->next;
         delete head;
         head = temp;
     }

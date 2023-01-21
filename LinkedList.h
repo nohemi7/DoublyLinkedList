@@ -17,14 +17,14 @@ class LinkedList{
         void print();
         // Comparison Operators
         
-        bool operator==(LinkedList &other) const;
-        bool operator!=(LinkedList &other) const;
+        bool operator==(const LinkedList &other) const;
+        bool operator!=(const LinkedList &other) const;
 
     private:
         // node fields go here
-        struct node{
+        struct node {
             int info;
-            node *next
+            node *next;
         };
     node *head;
     node *tail;
