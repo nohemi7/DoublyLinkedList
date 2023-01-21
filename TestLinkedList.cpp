@@ -42,10 +42,27 @@ class LinkedListTest {
             assertTrue(!(l1 == l2), "l1 = [1, 2], l2 = [1, 3]");
         }
 
+        void test_operator_noteq() {
+            LinkedList l1;
+            LinkedList l2;
+
+            // Case 1: Empty List
+            assertTrue(!(l1 != l2), "empty lists !=");
+            
+            l1.append(2);
+            // Case 2: List not same length
+            assertTrue((l1 != l2), "l1 = [2], l2 = []");
+
+            l2.append(1);
+            // Case 3: List same length different values
+            assertTrue((l1 != l2), "l1 = [2], l2 = [1]");
+        }
+
 };
 
 int main() {
     LinkedListTest test;
     test.test_operator_eqeq();
+    test.test_operator_noteq();
     return 0;
 }
